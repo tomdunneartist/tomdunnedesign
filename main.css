@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #0000ff;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.card {
+    background-color: #FFFFFF;
+    width: 400px;
+    padding: 25px 25px;
+    border-radius: 5px;
+    line-height: 1.4;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 1em 0em 1em 0em;
+}
+
+p {
+    font-weight: 300;
+}
+
+#ch {
+    display: none;
+}
+
+#ch:checked ~ .content {
+    display: block;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+
+.content {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #0000ff;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.6em;
+    margin-top: 1em;
+}
+
