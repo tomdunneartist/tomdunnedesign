@@ -236,7 +236,6 @@ html[data-theme='7'] {
 }
 
 .content-row {
-    height: 24px;
     cursor: default;
     width: 100%;
 }
@@ -259,7 +258,7 @@ html[data-theme='7'] {
 }
 
 .content-row-right {
-    padding: 130px 50px 50px;
+    padding: 120px 50px 50px;
     font-size: 42px;
     line-height: 48px;
     text-transform: none;
@@ -306,7 +305,7 @@ html[data-theme='7'] {
     width: 500px;
     height: auto;
     display: none;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: opacity 2ms ease-in-out;
     transform: translate(-5%, 10%);
     pointer-events: none;
@@ -317,7 +316,7 @@ html[data-theme='7'] {
     width: 500px;
     height: auto;
     display: none;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: opacity 2ms ease-in-out;
     transform: translate(-5%, 10%);
     pointer-events: none;
@@ -407,6 +406,11 @@ button:active {
     min-height: 456px;
 }
 
+.mobile-description {
+    display: none;
+    background: var(--background);
+}
+
 /*pre {
      margin:0;
      padding:0;
@@ -467,7 +471,6 @@ button:active {
     }
 
     .content-row {
-        height: 32px;
     }
 
     .content-row-empty {
@@ -480,6 +483,14 @@ button:active {
     }
 
     .mobile-text {
+        display: inline-block;
+        background: var(--background);
+    }
+
+    .mobile-description {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-transform: none;
         display: inline-block;
         background: var(--background);
     }
