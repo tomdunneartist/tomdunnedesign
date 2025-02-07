@@ -23,8 +23,13 @@
         <link rel="icon" href="/images/tdportrait500px.jpg">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet">
     </head>
 
     <body id="body-container" class="">
@@ -53,15 +58,6 @@
 
                     <div class="content-row content-row-empty"></div>
 
-                    <!--<div class="content-row">
-                        <button id="link-1" class="content-link" tabindex="1">
-
-                            <span class="button-label">Portfolio</span>
-                            <span class="mobile-only">💻</span>
-
-                        </button>
-                    </div>-->
-
                     <div class="content-row">
                         <button id="email-copy" class="no-mobile content-copy" tabindex="1">
 
@@ -78,26 +74,13 @@
 
                     </div>
 
-                    <div class="content-row content-row-empty"></div>
-
-                    <!--<div class="content-row">
-                        <button id="link-2" class="content-link" tabindex="1">
-
-                            <span class="button-label">Instagram</span>
-                            <span class="mobile-only">📷</span>
-
-                        </button>
-                    </div>-->
-
                     <div class="content-row">
-                        <button id="link-3" class="content-link" tabindex="1">
+                        <button id="link-1" class="content-link" tabindex="1">
 
                             <span class="button-label">LinkedIn</span>
-                            <!--<span class="mobile-only">💻</span>-->
 
                         </button>
                     </div>
-                    
 
                     <div class="content-row content-row-bottom">
                         <button id="theme-toggle" class="content-switch" tabindex="1">
@@ -111,119 +94,27 @@
                 </div>
                 <div class="content-row content-row-right">
                     <p>
-                        <span>A multidisciplinary designer who creates intuitive, scalable digital experiences that drive engagement and elevate brands, blending <span class="aes">aesthetics</span> & <span class="func">functionality</span> to craft adaptable design solutions that grow with your needs.</span>
-
+                        <span>A multidisciplinary designer who creates intuitive, scalable digital
+                            experiences that drive engagement and elevate brands, blending
+                            <span class="pointer"><span class="aes" id="aesthetics">aesthetics</span></span>
+                            &
+                            <span class="pointer"><span class="func" id="functionality">functionality</span></span>
+                            to craft adaptable design solutions that grow with your needs.</span>
                     </p>
+                    <img
+                        id="hover-image-01"
+                        src="/images/aesthetics-images.gif"
+                        alt="aesthetic image">
+
+                        <img
+                        id="hover-image-02"
+                        src="/images/functionality-images.gif"
+                        alt="aesthetic image">
                 </div>
-                
             </div>
-
         </div>
-        <script>
-
-            var themeToggle = document.getElementById("theme-toggle");
-
-            var emailCopy = document.getElementById("email-copy");
-            var emailLink = document.getElementById("email-link");
-
-            var link1 = document.getElementById("link-1");
-            var link2 = document.getElementById("link-2");
-            var link3 = document.getElementById("link-3");
-
-            var storedTheme = localStorage.getItem('theme') || (
-                window.matchMedia("(prefers-color-scheme: dark)").matches
-                    ? "dark"
-                    : "light"
-            );
-
-            if (storedTheme) {
-                if (storedTheme == "dark") {
-                    document
-                        .documentElement
-                        .setAttribute('data-theme', "6");
-                    //themeToggle.innerHTML = "[·····*·]";
-                } else if (storedTheme == "light") {
-                    document
-                        .documentElement
-                        .setAttribute('data-theme', "2");
-                    //themeToggle.innerHTML = "[·*······]";
-                } else {
-                    document
-                        .documentElement
-                        .setAttribute('data-theme', storedTheme);
-                }
-            }
-
-            themeToggle.onclick = function () {
-
-                console.log('Theme Toggle...');
-
-                var currentTheme = document
-                    .documentElement
-                    .getAttribute("data-theme");
-
-                var targetTheme = "6";
-
-                if (currentTheme === "1") {
-                    targetTheme = "2";
-                } else if (currentTheme === "2") {
-                    targetTheme = "3";
-                } else if (currentTheme === "3") {
-                    targetTheme = "4";
-                } else if (currentTheme === "4") {
-                    targetTheme = "5";
-                } else if (currentTheme === "5") {
-                    targetTheme = "6";
-                } else if (currentTheme === "6") {
-                    targetTheme = "7";
-                } else {
-                    targetTheme = "1";
-                };
-
-                document
-                    .documentElement
-                    .setAttribute('data-theme', targetTheme)
-                localStorage.setItem('theme', targetTheme);
-
-            }
-
-            emailCopy.onmouseenter = function () {
-                const root = document.querySelector(":root");
-                root
-                    .style
-                    .setProperty("--copy-text", `"📪"`);
-            }
-            emailCopy.onfocus = function () {
-                const root = document.querySelector(":root");
-                root
-                    .style
-                    .setProperty("--copy-text", `"📪"`);
-            }
-            emailCopy.onclick = function () {
-                navigator
-                    .clipboard
-                    .writeText('hello@tomdunne.design');
-                const root = document.querySelector(":root");
-                root
-                    .style
-                    .setProperty("--copy-text", `"📬 Copied"`);
-            }
-
-            emailLink.onclick = function () {
-                window.location.href = "mailto:hello@tomdunne.design";
-            }
-
-            link1.onclick = function () {
-                window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", '_blank');
-            }
-            link2.onclick = function () {
-                window.open("https://www.instagram.com/tomdunnedesign/", '_blank');
-            }
-            link3.onclick = function () {
-                window.open("https://www.linkedin.com/in/tomdunnedesign/", '_blank');
-            }
-        </script>
-
+        <script src="/script.js"></script>
+        <script src="/hover.js"></script>
     </body>
 
 </html>
