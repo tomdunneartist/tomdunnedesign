@@ -95,7 +95,7 @@ link1.onclick = function () {
     window.open("https://www.linkedin.com/in/tomdunnedesign", '_blank');
 }
 link2.onclick = function () {
-    window.open("https://www.instagram.com/tomdunnedesign/", '_blank');
+    window.open("https://www.tomdunne.dev", '_blank');
 }
 link3.onclick = function () {
     window.open("https://www.linkedin.com/in/tomdunnedesign", '_blank');
